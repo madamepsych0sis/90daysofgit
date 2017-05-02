@@ -63,12 +63,62 @@ dobDICTIONARY = {1:"January", 2:"February", 3:"March", 4:"April", 5:"May", 6:"Ju
 
 print "Great! We've got your birthday as %s %s, %s. Is this correct?" %(dobDICTIONARY[dobLIST[0]], dobLIST[1], dobLIST[2])
 correctBDAY = raw_input()
-if correctBDAY.upper == "YES":
+if correctBDAY.upper() == "YES":
 	print "YAY!"
 else:
 	print "Let's try again!"
 
-print dobLIST[2] % 4
+if dobLIST[2] % 4 == 0:
+	leapYear = True
+else:
+	leapYear = False
+
+#astroDictionary = {Capricorn1:19, Aquarius:49, Pisces:79, Aries:109, Taurus:140, Gemini:171, Cancer:203, Leo:234, Virgo:265, Libra:295, Scorpio:325, Sagittarius:355, Capricorn2:365}
+#leapAstroDictionary = {Capricorn1:19, Aquarius:49, Pisces:80, Aries:110, Taurus:141, Gemini:172, Cancer:204, Leo:235, Virgo:266, Libra:296, Scorpio:326, Sagittarius:356, Capricorn2:366}
+
+if (dobLIST[0] == 12 and dobLIST[1] >= 22) or (dobLIST[0] == 1 and dobLIST[1] <= 19):
+	astroSign = "Capricorn"
+elif (dobLIST[0] == 1 and dobLIST[1] >= 20) or (dobLIST[0] == 2 and dobLIST[1] <= 18):
+	astroSign = "Aquarius"
+elif (dobLIST[0] == 2 and dobLIST[1] >= 19) or (dobLIST[0] == 3 and dobLIST[1] <= 20):
+	astroSign = "Pisces"
+elif (dobLIST[0] == 3 and dobLIST[1] >= 21) or (dobLIST[0] == 4 and dobLIST[1] <= 19):
+	astroSign = "Aries"
+elif (dobLIST[0] == 4 and dobLIST[1] >= 20) or (dobLIST[0] == 5 and dobLIST[1] <= 20):
+	astroSign = "Taurus"
+elif (dobLIST[0] == 5 and dobLIST[1] >= 21) or (dobLIST[0] == 6 and dobLIST[1] <= 20):
+	astroSign = "Gemini"
+elif (dobLIST[0] == 6 and dobLIST[1] >= 21) or (dobLIST[0] == 7 and dobLIST[1] <= 22):
+	astroSign = "Cancer"
+elif (dobLIST[0] == 7 and dobLIST[1] >= 23) or (dobLIST[0] == 8 and dobLIST[1] <= 22):
+	astroSign = "Leo"
+elif (dobLIST[0] == 8 and dobLIST[1] >= 23) or (dobLIST[0] == 9 and dobLIST[1] <= 22):
+	astroSign = "Virgo"
+elif (dobLIST[0] == 9 and dobLIST[1] >= 23) or (dobLIST[0] == 10 and dobLIST[1] <= 22):
+	astroSign = "Libra"
+elif (dobLIST[0] == 10 and dobLIST[1] >= 23) or (dobLIST[0] == 11 and dobLIST[1] <= 21):
+	astroSign = "Scorpio"
+elif (dobLIST[0] == 11 and dobLIST[1] >= 22) or (dobLIST[0] == 12 and dobLIST[1] <= 21):
+	astroSign = "Sagittarius"
+
+print "Your astrological sign is... %s!" %(astroSign.upper())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
